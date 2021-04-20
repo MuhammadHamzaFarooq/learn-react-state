@@ -1,13 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: bootcamp class-02 learn react state concept
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -41,5 +39,6 @@ jobs:
          
       - name : Installing surge 
         run : npm install -g surge 
+        
       - name : Deploying on surge 
-        run : surge ./ http://react-props-concept.surge.sh/ --token ${{secrets.API}}
+        run : surge ./build http://react-props-concept.surge.sh/ --token ${{secrets.API}}
