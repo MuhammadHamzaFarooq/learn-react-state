@@ -1,4 +1,5 @@
 import React from 'react';
+import Dinner from './Dinner'
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -7,6 +8,8 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <Dinner></Dinner> */}
+    <Dinner dishName= 'Chicken karahi' sweetDish="Kheer"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
